@@ -1,0 +1,534 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  font-family: sans-serif;
+  background-color: rgb(200, 211, 220);
+}
+.menu {
+  position: sticky;
+  top: 0;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  height: 80px;
+  width: 100%;
+  z-index: 999;
+}
+.menu h2 {
+  color: aliceblue;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.menu h2 span {
+  color: rgb(12, 12, 84);
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.menu ul li {
+  position: relative;
+  padding: 10px 30px;
+}
+.menu ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: whitesmoke;
+}
+.menu ul li .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(20, 22, 22);
+  width: 150px;
+}
+.menu ul li .dropdown ul {
+  display: block;
+}
+.menu ul li:hover .dropdown {
+  display: block;
+}
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  background-color: blue;
+  height: 2px;
+  left: 0;
+  top: 100%;
+  transition: 0.3s ease;
+}
+.menu ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  background-color: blue;
+  height: 2px;
+  right: 0;
+  top: 0;
+  transition: 0.3s ease;
+}
+.menu ul li a:hover::before {
+  width: 100%;
+}
+.menu ul li a:hover {
+  color: blue;
+}
+.menu ul li a:hover::after {
+  width: 100%;
+}
+.group-home {
+  background-color: rgb(91, 97, 101);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.group-home .home {
+  width: 45%;
+  margin-left: 80px;
+}
+.group-home .home h1 {
+  font-size: 50px;
+  margin-left: 50px;
+  font-family: sans-serif;
+}
+.group-home h1 span {
+  color: rgb(41, 41, 107);
+  font-weight: 900;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.group-home h1 .span1 {
+  color: rgb(162, 162, 162);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.group-home .home h2 {
+  margin-left: 50px;
+  margin-top: 30px;
+  color: rgb(202, 199, 204);
+  font-family: sans-serif;
+}
+.group-home .home h3 {
+  margin-left: 50px;
+  margin-top: 30px;
+  font-family: sans-serif;
+  color: rgb(158, 152, 152);
+}
+.group-home .home p {
+  margin-top: 30px;
+  margin-left: 50px;
+  font-family: sans-serif;
+  color: gray;
+}
+.group-home .home .news {
+  margin-left: 100px;
+  margin-top: 50px;
+}
+.group-home .home .news .btn {
+  text-decoration: none;
+  color: rgb(252, 254, 255);
+  background-color: rgb(148, 153, 148);
+  padding: 10px 60px;
+  border-radius: 5px;
+}
+.group-home .home .news .btn:hover {
+  background-color: rgb(19, 191, 82);
+  box-shadow: 6px 6px 10px gray;
+}
+.img {
+  width: 45%;
+}
+.img img {
+  height: 100vh;
+}
+.group-about {
+  margin-top: 50px;
+  width: 80%;
+  height: 40rem;
+  display: flex;
+  margin-left: 152px;
+  background-color: rgb(104, 99, 99);
+}
+.group-about .me {
+  width: 20%;
+}
+.group-about .me .img img {
+  height: 22.5rem;
+  width: 230px;
+  border-radius: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-top: 20px;
+}
+.text {
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+}
+.text p {
+  color: rgb(66, 61, 61);
+  margin-top: 10px;
+}
+.group-about .btn1 a {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-size: 17px;
+  margin-top: 40px;
+  border-radius: 8px;
+  text-align: center;
+  margin-left: 50px;
+  padding-top: 9px;
+  height: 40px;
+  background-color: rgb(35, 70, 35);
+  width: 100px;
+}
+.group-about .btn1 a:hover {
+  background-color: rgb(33, 179, 33);
+}
+.group-about .friend {
+  width: 40%;
+}
+.group-about .friend .img img {
+  height: 22.5rem;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.group-about .family {
+  width: 40%;
+}
+.group-about .friend .btn1 a {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-size: 17px;
+  margin-top: 62px;
+  border-radius: 8px;
+  text-align: center;
+  margin-left: 180px;
+  padding-top: 9px;
+  height: 40px;
+  background-color: rgb(35, 70, 35);
+  width: 100px;
+}
+.group-about .btn1 a:hover {
+  background-color: rgb(33, 179, 33);
+}
+.group-about .family .img img {
+  height: 22.5rem;
+  border-radius: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+.group-about .family .btn1 a {
+  display: block;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: sans-serif;
+  font-size: 17px;
+  margin-top: 45px;
+  border-radius: 8px;
+  text-align: center;
+  margin-left: 200px;
+  padding-top: 9px;
+  height: 40px;
+  background-color: rgb(35, 70, 35);
+  width: 100px;
+}
+.group-about .family .btn1 a:hover {
+  background-color: rgb(33, 179, 33);
+}
+.group-about:hover .img img:not(:hover) {
+  filter: blur(3px);
+  opacity: 0.5;
+  transform: translate(2);
+}
+html {
+  scroll-behavior: smooth;
+}
+.group-memory {
+  width: 100%;
+  position: relative;
+}
+.group-memory .life {
+  position: relative;
+  margin-top: 70px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.group-memory .life .text1 {
+  width: 20%;
+  background-color: rgb(79, 76, 76);
+  margin-left: -90px;
+  box-shadow: 6px 6px 12px gray;
+  padding: 10px 15px;
+  z-index: 0;
+}
+.group-memory .life .text1 h1 {
+  text-align: center;
+  color: blue;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+.group-memory .life .text1 p {
+  color: gray;
+}
+.group-memory .life .text2 {
+  background-color: rgb(42, 41, 41);
+  width: 20%;
+  margin-left: 10px;
+  box-shadow: 6px 6px 12px gray;
+  padding: 10px 15px;
+  z-index: 2;
+}
+.group-memory .life .text2 h1 {
+  text-align: center;
+  color: rgb(191, 215, 37);
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+.group-memory .life .text2 p {
+  color: rgb(185, 181, 181);
+}
+.group-memory .life .text3 {
+  background-color: rgb(23, 22, 22);
+  width: 20%;
+  margin-left: 10px;
+  box-shadow: 6px 6px 12px gray;
+  padding: 10px 15px;
+}
+.group-memory .life .text3 h1 {
+  text-align: center;
+  color: rgb(15, 205, 62);
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+.group-memory .life .text3 p {
+  color: aliceblue;
+}
+.group-memory .life .img1 img {
+  height: 30rem;
+  width: 50%;
+  margin-left: 100px;
+}
+.group-memory .life .ring::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 30rem;
+  top: 0rem;
+  border-radius: 50%;
+  left: 110px;
+  z-index: -1;
+  box-shadow: 0 0 20px rgb(255, 253, 253);
+  background-image: linear-gradient(45deg, blue, green, cyan);
+}
+.high-school {
+  width: 100%;
+  background-color: rgb(65, 210, 103);
+  margin-top: 50px;
+  height: 100vh;
+}
+.high-school .text4 h2 {
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgb(15, 15, 172);
+  padding: 70px;
+  font-size: 2rem;
+}
+.high-school .text4 p {
+  width: 60%;
+  margin-left: 290px;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.high-school .btn {
+  position: relative;
+  margin-top: 100px;
+}
+.high-school .btn a {
+  display: flex;
+  text-decoration: none;
+  margin-left: 38rem;
+  margin-top: 50px;
+  width: 250px;
+  height: 50px;
+  align-items: center;
+  color: white;
+  justify-content: center;
+  background-color: rgb(92, 136, 25);
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 12px;
+}
+.high-school .btn a:hover {
+  background-color: green;
+}
+.result {
+  margin-top: 100px;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(134, 158, 179);
+}
+.result .text5 h1 {
+  color: rgb(34, 34, 76);
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 70px;
+}
+.result .primary {
+  display: flex;
+}
+.result .primary .text6 {
+  width: 30%;
+  margin-left: 13%;
+}
+.result .primary .text6 h3 {
+  margin-top: 80px;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  color: aqua;
+  text-align: center;
+}
+.result .primary .text6 p {
+  margin-top: 50px;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  color: rgb(61, 54, 54);
+}
+.result .primary .img2 img {
+  width: 50%;
+  margin-top: -200px;
+  height: 40rem;
+  margin-left: 300px;
+  border-radius: 50%;
+}
+.result .secondary {
+  display: flex;
+}
+.result .secondary .text6 {
+  width: 30%;
+  margin-left: 13%;
+}
+.result .secondary .text6 h3 {
+  margin-top: 80px;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  color: rgb(34, 169, 47);
+  text-align: center;
+}
+.result .secondary .text6 p {
+  margin-top: 50px;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  color: rgb(61, 54, 54);
+}
+.result .secondary .img2 img {
+  width: 50%;
+  margin-top: -50px;
+  height: 40rem;
+  margin-left: 300px;
+  border-radius: 50%;
+}
+.result .highschool {
+  display: flex;
+}
+.result .highschool .text6 {
+  width: 30%;
+  margin-left: 15%;
+}
+.result .highschool .text6 h3 {
+  margin-top: 45px;
+  font-family: sans-serif;
+  font-size: 1.5rem;
+  color: rgb(54, 16, 168);
+  text-align: center;
+}
+.result .highschool .text6 p {
+  margin-top: 30px;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  color: rgb(61, 54, 54);
+}
+.result .highschool .img2 img {
+  width: 50%;
+  margin-top: -90px;
+  height: 30rem;
+  margin-left: 300px;
+  border-radius: 50%;
+}
+.group-contact {
+  margin-top: 100px;
+  width: 100%;
+  height: 25rem;
+  background-color: gray;
+}
+.group-contact .name h3 {
+  text-align: center;
+  padding-top: 50px;
+  font-family: sans-serif;
+  color: rgb(73, 69, 69);
+}
+.group-contact .fb p {
+  text-align: center;
+  padding-top: 50px;
+  font-family: sans-serif;
+  color: rgb(73, 69, 69);
+}
+.group-contact .fb p a {
+  text-decoration: none;
+  color: black;
+}
+.group-contact .fb p a:hover {
+  text-decoration: underline;
+  color: rgb(46, 45, 45);
+}
+.group-contact .email p {
+  text-align: center;
+  padding-top: 50px;
+  font-family: sans-serif;
+  color: rgb(73, 69, 69);
+}
+.group-contact .live p span {
+  font-size: 20px;
+  color: rgb(31, 30, 30);
+}
+.group-contact .email p span {
+  font-size: 20px;
+  color: rgb(31, 30, 30);
+}
+.group-contact .fb p span {
+  font-size: 20px;
+  color: rgb(31, 30, 30);
+}
+.group-contact .phone p span {
+  font-size: 20px;
+  color: rgb(31, 30, 30);
+}
+.group-contact .live p {
+  text-align: center;
+  padding-top: 50px;
+  font-family: sans-serif;
+  color: rgb(73, 69, 69);
+}
+.group-contact .phone p {
+  text-align: center;
+  padding-top: 50px;
+  font-family: sans-serif;
+  color: rgb(73, 69, 69);
+}
